@@ -8,10 +8,10 @@ ZETA = 17
 
 def get_bit_reversed_zetas():
     zetas = []
-    for i in range(128):
+    for i in range(256):
         rev = 0
         temp = i
-        for _ in range(7):
+        for _ in range(8):
             rev = (rev << 1) | (temp & 1)
             temp >>= 1
         zetas.append(pow(ZETA, rev, Q))
